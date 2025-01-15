@@ -14,14 +14,19 @@
         href="https://fonts.googleapis.com/css2?family=Faustina:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet"
     />
+    <link rel="stylesheet" href="../static/css/login.css">
 </head>
 <body>
         <form action="/login" method="post" class="form__container">
-            <label>E-mail Address</label>
-            <input name="email" type="email" placeholder="Email Address" required />
+            <div class="form__labelinput">
+                <label>E-mail</label>
+                <input name="email" type="email" placeholder="Email Address" required />
+            </div>
 
-            <label>Password</label>
-            <input name="password" type="password" placeholder="Password" required />
+            <div class="form__labelinput">
+                <label>Password</label>
+                <input name="password" type="password" placeholder="Password" required />
+            </div>
 
         <div class="form__submit">
             <button type="submit">Login</button>
