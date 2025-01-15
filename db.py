@@ -33,11 +33,11 @@ class User(Base):
         password: User's password
     """
     __tablename__ = 'users'  # The table name in the remote database
+    userId = Column(Integer, primary_key=True, autoincrement=True)
     firstname = Column(String(50), nullable=False)
     lastname = Column(String(50), nullable=False)
     email = Column(String(50), nullable=False, unique=True)
     password = Column(String(255), nullable=False)
-    userId = Column(Integer, primary_key=True, autoincrement=True)
 
 # Using a 'try - except' block to
 # attempt the connection to the
