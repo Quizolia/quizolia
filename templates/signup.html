@@ -11,23 +11,32 @@
             href="https://fonts.googleapis.com/css2?family=Faustina:wght@300;400;500;600;700;800&display=swap"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="../static/css/signup.css">
     </head>
 
     <body>
         <form action="/signup" method="post" class="form__container">
             <h3>Sign Up</h3>
             <!-- div class="msg">{{ msg }}</!-->
-            <label for="firstname">First Name</label>
-            <input name="firstname" type="text" placeholder="First name" required id="firstname">
+            <div class="form__labelinput">
+                <label for="firstname">First Name</label>
+                <input name="firstname" type="text" placeholder="First name" required id="firstname">
+            </div>
 
-            <label for="lastname">Last Name</label>
-            <input name="lastname" type="text" placeholder="Last name" required id="lastname">
+            <div class="form__labelinput">
+                <label for="lastname">Last Name</label>
+                <input name="lastname" type="text" placeholder="Last name" required id="lastname">
+            </div>
 
-            <label for="mail">E-mail</label>
-            <input name="email" type="email" placeholder="Email Address" required id="mail">
+            <div class="form__labelinput">
+                <label for="mail">E-mail</label>
+                <input name="email" type="email" placeholder="Email Address" required id="mail">
+            </div>
 
-            <label for="password">Password</label>
-            <input name="password" type="password" placeholder="Password" required id="password">
+            <div class="form__labelinput">
+                <label for="password">Password</label>
+                <input name="password" type="password" placeholder="Password" required id="password">
+            </div>
 
             <div class="form__terms">
             <input name="terms_and_conditions" type="checkbox" required id="terms"/>
