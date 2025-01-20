@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, flash, redirect, session, url_for
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
-from os import getenv
+from os import getenv, environ
 from dotenv import load_dotenv
 from datetime import timedelta, datetime, timezone
 
@@ -174,6 +174,6 @@ def logout():
 
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))  # Default to 5000 if PORT is not set
+    port = int(environ.get("PORT", 5000))  # Default to 5000 if PORT is not set
     app.run(host="0.0.0.0", port=port)
     # app.run(debug=True, port=5000)
