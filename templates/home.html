@@ -101,7 +101,7 @@
     <script>
         // Example: Backend passes a status via a data attribute
         const status = "{{ flash_message|safe }}";
-    
+
         // Stylish notifications for user timeout and login success
         if (status === "timeout") {
             toastr.error("Your session has expired. Please log in again!", "Session Timeout", {
