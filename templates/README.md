@@ -1,0 +1,1 @@
+This folder contins the HTML files for the Quizolia app. The templates are rendered using Flask's Jinja templating engine.

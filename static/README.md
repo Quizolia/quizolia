@@ -1,0 +1,1 @@
+This folder holds the static files meant for styling the website: CSS, JS and Images.
