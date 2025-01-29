@@ -26,6 +26,7 @@ Implementing user feedback, and improving Quizolia, to build a better Learnopoli
 15. Create email for Quizolia
 16. Understand how all the code works, especially the JS.
 17. Revamp and rewwrite the code.
+18. Customize the API being called (OpenTDB) so that the user can select the type of question to be displayed.
 
 ### User Feedback
 
