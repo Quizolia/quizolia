@@ -108,7 +108,7 @@ def signUpNewUser():
         lastname = request.form['lastname']
         email = request.form['email']
         password = request.form['password']
-        # hashed_password = generate_password_hash(password)
+        hashed_password = generate_password_hash(password)
 
         if Users.query.filter_by(email=email).first():
             flash('Email already registered. Please log in.', 'error')
@@ -119,7 +119,7 @@ def signUpNewUser():
                 firstname=firstname,
                 lastname=lastname,
                 email=email,
-                password=password,  # hashed_password,
+                password=hashed_password,
                 created_at=datetime.utcnow(),
                 updated_at=datetime.utcnow(),
                 last_login=datetime.utcnow()
@@ -127,7 +127,7 @@ def signUpNewUser():
             db.session.add(new_user)
             db.session.commit()
             flash('Registration successful! Please log in.', 'success')
-            return redirect('/signup')
+            return redirect('/login')
         except Exception as e:
             db.session.rollback()
             flash('An error occurred during registration. Please try again.', 'error')
