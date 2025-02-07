@@ -1,6 +1,6 @@
 """
-This Flask module stores the user's details
-to the remote database using ORM.
+This Flask module contains a database
+structure for the device info table.
 Like other files in this directory, the
 code was generated using ChatGPT.
 """
