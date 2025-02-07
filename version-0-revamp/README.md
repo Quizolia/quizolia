@@ -28,6 +28,7 @@ Implementing user feedback, and improving Quizolia, to build a better Learnopoli
 17. Revamp and rewwrite the code.
 18. Customize the API being called (OpenTDB) so that the user can select the type of question to be displayed.
 19. Ensure that if the user does not enable JavaScript on his or her web browser, the website will not work well.
+c
 
 ### User Feedback
 
