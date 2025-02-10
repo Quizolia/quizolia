@@ -13,6 +13,7 @@ app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=30)  # 30-minute se
 app.secret_key = getenv('SECRET_KEY')
 db = SQLAlchemy(app)
 
+
 # User model
 class Users(db.Model):
     """"
@@ -42,7 +43,7 @@ def session_timeout_handler():
             # Parse last_activity if it's stored as a string
             last_activity = datetime.strptime(last_activity, "%Y-%m-%d %H:%M:%S.%f")
             # Ensure both datetime objects are naive
-            last_activity = last_activity.replace(tzinfo=None)
+        last_activity = last_activity.replace(tzinfo=None)
 
         if (now - last_activity).total_seconds() > app.config['PERMANENT_SESSION_LIFETIME'].total_seconds():
             session.pop('userId', None)
